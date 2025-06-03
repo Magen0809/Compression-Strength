@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Prediction Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>House Price Predictor</h1>
+        
+        <!-- Feature Selection -->
+        <div class="feature-selection">
+            <h3>Select Features:</h3>
+            <div id="feature-checkboxes"></div>
+        </div>
+        
+        <!-- Input Controls -->
+        <div class="input-controls" id="input-controls"></div>
+        
+        <!-- Prediction Result -->
+        <button id="predict-btn">Predict</button>
+        <div id="prediction-result"></div>
+        
+        <!-- Feature Importance Chart -->
+        <canvas id="importance-chart"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
