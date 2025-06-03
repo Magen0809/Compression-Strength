@@ -1,0 +1,21 @@
+from sklearn.ensemble import RandomForestRegressor
+import pandas as pd
+import joblib
+
+# Dummy dataset
+df = pd.DataFrame({
+    'cement': [10, 20, 30, 40],
+    'sand': [20, 30, 40, 50],
+    'glass': [5, 10, 15, 20],
+    'water': [200, 210, 220, 230],
+    'strength': [30, 35, 40, 45]
+})
+
+X = df[['cement', 'sand', 'glass', 'water']]
+y = df['strength']
+
+model = RandomForestRegressor()
+model.fit(X, y)
+
+# Save model
+joblib.dump(model, 'best_model.pkl')
